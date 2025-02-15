@@ -1,12 +1,17 @@
 package com.example.springdemo.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Data;
-@Data
+import com.example.springdemo.enums.TypeComposant;
+import jakarta.persistence.*;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
+
+
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 
 
 public class DetailComposant {
@@ -14,4 +19,10 @@ public class DetailComposant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long IdDetailComposant;
     private Float Imc;
+    @Enumerated(EnumType.STRING)
+    private TypeComposant typeComposant;
+
+    @OneToOne
+    @JoinColumn(name = "composant_id")
+    private Composant composant;
 }

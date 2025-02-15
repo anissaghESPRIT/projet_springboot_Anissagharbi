@@ -1,14 +1,19 @@
 package com.example.springdemo.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Data;
+import jakarta.persistence.*;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import java.time.LocalDate;
-@Data
+import java.util.List;
+
+
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
 
 public class Commande {
     @Id
@@ -19,5 +24,13 @@ public class Commande {
     private Float TotalRemise;
     private Float TotalCommande;
     private Long Note;
+    //Client → Commande (1 → *)
+    @ManyToOne
+    @JoinColumn(name = "client_id")
+    private Client client;
+    //Commande → Menu (1 → *)
+    @OneToMany(mappedBy = "commande")
+    private List<Menu> menus;
+
 }
 
