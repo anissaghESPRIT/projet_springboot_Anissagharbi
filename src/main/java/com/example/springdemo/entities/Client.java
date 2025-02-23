@@ -21,9 +21,9 @@ import java.util.Set;
 public class Client implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long IdClient;
-    private String Identifiant;
-    private LocalDate DatePremiereVisite;
+    private Long idClient;
+    private String identifiant;
+    private LocalDate datePremiereVisite;
     //Client → Commande (1 → *)
     @OneToMany(mappedBy = "client")
     private Set<Commande> commandes;

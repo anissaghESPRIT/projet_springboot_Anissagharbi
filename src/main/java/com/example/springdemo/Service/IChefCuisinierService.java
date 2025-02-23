@@ -1,7 +1,6 @@
 package com.example.springdemo.Service;
 
 import com.example.springdemo.entities.ChefCuisinier;
-import com.example.springdemo.entities.Client;
 
 import java.util.List;
 

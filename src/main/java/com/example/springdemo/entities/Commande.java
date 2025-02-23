@@ -18,15 +18,15 @@ import java.util.List;
 public class Commande {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long IdCommande;
-    private LocalDate DateCommande;
-    private Integer PourcentageRemise;
-    private Float TotalRemise;
-    private Float TotalCommande;
-    private Long Note;
+    private Long idCommande;
+    private LocalDate dateCommande;
+    private Integer pourcentageRemise;
+    private Float totalRemise;
+    private Float totalCommande;
+    private Long note;
     //Client → Commande (1 → *)
     @ManyToOne
-    @JoinColumn(name = "client_id")
+    @JoinColumn(name = "idClient")
     private Client client;
     //Commande → Menu (1 → *)
     @OneToMany(mappedBy = "commande")

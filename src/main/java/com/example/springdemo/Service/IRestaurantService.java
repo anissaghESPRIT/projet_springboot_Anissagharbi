@@ -1,6 +1,7 @@
 package com.example.springdemo.Service;
 
 import com.example.springdemo.entities.Restaurant;
+import com.example.springdemo.repositories.RestaurantRepository;
 
 import java.util.List;
 

@@ -18,9 +18,9 @@ import java.util.Set;
 public class Composant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long IdComposant;
-    private String NomComposant;
-    private Float Prix;
+    private Long idComposant;
+    private String nomComposant;
+    private Float prix;
     @ManyToMany(mappedBy = "composants")
     private Set<Menu> menus;
     // Menu → Composant (1 → *)

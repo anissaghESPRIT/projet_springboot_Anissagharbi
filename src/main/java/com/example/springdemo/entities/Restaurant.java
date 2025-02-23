@@ -17,9 +17,9 @@ import java.util.Set;
 public class Restaurant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long IdRestaurant;
-    private String Nom;
-    private Long NbPlacesMax;
+    private Long idRestaurant;
+    private String nom;
+    private Long nbPlacesMax;
     //chainerestauration1-->*restaurant
     @ManyToOne
     @JoinColumn(name = "id_chaine_restauration")

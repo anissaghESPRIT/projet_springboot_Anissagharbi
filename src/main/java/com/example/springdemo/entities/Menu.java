@@ -17,9 +17,9 @@ import java.util.Set;
 public class Menu {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long IdMenu;
-    private String LibelleMenu;
-    private Float PrixTotal;
+    private Long idMenu;
+    private String libelleMenu;
+    private Float prixTotal;
 
     @Enumerated(EnumType.STRING)
     private TypeMenu typeMenu;

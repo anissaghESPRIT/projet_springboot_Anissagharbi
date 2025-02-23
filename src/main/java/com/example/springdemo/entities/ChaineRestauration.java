@@ -19,9 +19,9 @@ import java.util.Set;
 public class ChaineRestauration {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long IdChaineRestauration;
-    private String Libelle;
-    private LocalDate DateCreation;
+    private Long idChaineRestauration;
+    private String libelle;
+    private LocalDate dateCreation;
     //chainerestauration1-->*restaurant
     @OneToMany(mappedBy = "chaineRestauration", cascade = CascadeType.ALL)
     private List<Restaurant> restaurants;

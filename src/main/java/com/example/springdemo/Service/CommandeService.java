@@ -23,10 +23,12 @@ public class CommandeService implements ICommandeService {
     @Override
     public Commande getCommandeById(Long id) {
         return null;
+
     }
 
     @Override
     public List<Commande> getAllCommandes() {
         return List.of();
     }
+
 }

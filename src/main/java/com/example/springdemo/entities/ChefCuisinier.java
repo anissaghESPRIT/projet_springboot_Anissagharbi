@@ -1,6 +1,6 @@
 package com.example.springdemo.entities;
 
-import com.example.springdemo.enums.TypeChef;
+import com.example.springdemo.enums.typeChef;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -18,11 +18,11 @@ import java.util.List;
 public class ChefCuisinier {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long IdChefCuisinier;
-    private String Nom;
-    private String Prenom;
+    private Long idChefCuisinier;
+    private String nom;
+    private String prenom;
     @Enumerated(EnumType.STRING)
-    private TypeChef typeChef;
+    private typeChef typeChef;
 // ChefCuisinier → Menu (* → *)
 @ManyToMany
 @JoinTable(

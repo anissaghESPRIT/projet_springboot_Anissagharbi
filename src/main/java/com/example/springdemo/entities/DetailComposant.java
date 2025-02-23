@@ -17,8 +17,8 @@ import lombok.experimental.FieldDefaults;
 public class DetailComposant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long IdDetailComposant;
-    private Float Imc;
+    private Long idDetailComposant;
+    private Float imc;
     @Enumerated(EnumType.STRING)
     private TypeComposant typeComposant;
 
