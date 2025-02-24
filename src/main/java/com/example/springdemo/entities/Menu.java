@@ -4,6 +4,7 @@ import com.example.springdemo.enums.TypeMenu;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Set;
@@ -14,6 +15,7 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@Component
 public class Menu {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

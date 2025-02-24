@@ -2,6 +2,7 @@ package com.example.springdemo.repositories;
 
 import com.example.springdemo.entities.Client;
 import com.example.springdemo.entities.Commande;
+import lombok.AllArgsConstructor;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

@@ -1,10 +1,17 @@
 package com.example.springdemo.Service;
 
 import com.example.springdemo.entities.Commande;
+import com.example.springdemo.repositories.CommandeRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
+@AllArgsConstructor
 public class CommandeService implements ICommandeService {
+  @Autowired
+  CommandeRepository commandeRepository;
     @Override
     public Commande createCommande(Commande commande) {
         return null;

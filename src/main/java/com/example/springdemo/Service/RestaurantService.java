@@ -1,10 +1,17 @@
 package com.example.springdemo.Service;
 
 import com.example.springdemo.entities.Restaurant;
+import com.example.springdemo.repositories.MenuRepository;
+import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
-
+@Service
+@AllArgsConstructor
 public class RestaurantService implements IRestaurantService {
+   @Autowired
+   MenuRepository menuRepository;
     @Override
     public Restaurant createRestaurant(Restaurant restaurant) {
         return null;
